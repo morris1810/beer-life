@@ -176,10 +176,18 @@
   }
   .navBar .navRight .accountContainer {
     margin: 20px;
-      height: 100px;
-      width: 100px;
+    height: 100px;
+    width: 100px;
+  }
+  .navBar .navRight .accountContainer #nologin, 
+  .navBar .navRight .accountContainer #logined {
+    height: 100px;
+    width: 100px;
   }
   #closeNavMenuBtn {
     display: flex;
   }
+}
+.navBar .navRight .accountContainer img {
+  height: 80px;
 }

@@ -1,0 +1,143 @@
+:root {
+    font-size: 16px;
+    --black-1: #000000;
+    --black-2: #121212;
+    --white-1: #FFFFFF;
+    --white-2: #EEEEEE;
+    --brand-color-1: #F98E00;
+    --brand-color-2: #cfa164;
+}
+::selection {
+    background: var(--brand-color-1);
+  }
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: var(--black-2);
+    color: var(--white-1);
+    width: 100vw;
+}
+/*============================================*/
+#mainContent {
+    padding-top: 70px;
+    position: relative;
+    height: calc(100vh - 70px);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url("../img/contactBg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#mainContent::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+#mainContent .title {
+    z-index: 2;
+    font-size: 3rem;
+}
+#leadForm {
+    z-index: 2;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+#leadForm label {
+    margin: 20px 0 5px 0;
+    font-size: 1.2rem;
+}
+#leadForm input, 
+#leadForm textarea {
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    box-shadow: inset 0 0 3px #eee;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    text-shadow: 0 0 1px #eee;
+}
+#leadForm .inputNameContainer {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#leadForm .firstNameContainer, 
+#leadForm .lastNameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: calc(50% - 20px);
+    min-width: 80px;
+
+}
+#leadForm .inputNameContainer input {
+    width: 100%;
+}
+#leadForm textarea:focus,
+#leadForm input:focus {
+    outline-color: var(--brand-color-1);
+}
+#leadForm .inputNameContainer span {
+    opacity: 0.5;
+    font-size: 12px;
+    margin-top: 5px;
+}
+/*============================================*/
+#leadForm .btnContainer {
+    background: var(--brand-color-1);
+    height: 30px;
+    width: 122px;
+    overflow: visible;
+    align-self: flex-end;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    margin-right: 15px;
+    padding: 0 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 1s;
+
+}
+#leadForm .btnContainer #submitBtn {
+    background: transparent;
+    border: none;
+    outline: none;
+    align-self: center;
+    font-weight: 900;
+    cursor: pointer;
+
+}
+#leadForm .btnContainer .submitImg {
+    width: 100px;
+    filter: grayscale(1);
+    transition: 1s;
+}
+#leadForm .btnContainer.active {
+    width: 137px;
+}
+#leadForm .btnContainer.active .submitImg {
+    filter: grayscale(0);
+    width: 120px;
+}
+/*============================================*/

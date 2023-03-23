@@ -1,0 +1,182 @@
+:root {
+  --white-1: #FFFFFF;
+  --white-2: #EEEEEE;
+  --nav-bg: rgba(0, 0, 0, 0.8);
+  --black-1: #000000;
+  --black-2: #121212;
+  --brand-color-1: #F98E00;
+  --brand-color-2: #cfa164;
+}
+
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 20px);
+  height: 70px;
+
+  background-color: var(--nav-bg);
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+  box-shadow: 0 0 10px #121212;
+
+  padding: 0 10px;
+
+  font-size: 16px;
+
+  z-index: 101;
+}
+.navBar .navLeft {
+  display: flex;
+  align-items: center;
+  max-width: 50%;
+  height: 100%;
+}
+.navBar .navLeft .logo {
+  margin: 0 10px;
+  height: 90%;
+}
+.navBar .navLeft .companyName {
+  color: var(--white-1);
+  font-size: 2.3em;
+  margin-left: 10px;
+}
+.navBar .navRight {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+  transition: right 0.5s;
+}
+.navBar .navRight .navList {
+  display: flex;
+  align-items: center;
+}
+.navBar .navRight .navList .navItem{
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--white-1);
+  transition: 0.2s;
+}
+.navBar .navRight .navList .navItem:hover {
+  color: var(--brand-color-2);
+}
+.navBar .navRight .navList .navItem.active{
+  color: var(--brand-color-1);
+  pointer-events: none
+}
+
+.navBar .navRight .accountContainer {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  background: var(--white-2);
+  border-radius: 50%;
+}
+.navBar .navRight .accountContainer #nologin {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: var(--brand-color-2);
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+}
+
+.navBar .navRight .accountContainer #logined {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: var(--brand-color-1);
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+}
+.navBar .navRight .accountContainer img {
+  height: 25px;
+}
+
+.navBar .navRight .accountContainer #logined.active {display: flex;}
+.navBar .navRight .accountContainer #nologin.active {display: flex;}
+.navBar .btnContainer {
+  display: none;
+  height: 100%;
+  width: 50px;
+  min-width: 70px;
+  cursor: pointer;
+}
+.navBar .btnContainer .menuBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 100%;
+}
+.navBar .btnContainer .menuBtn img {
+  height: 50%;
+  padding: 0 10px;
+  border-left: 1px solid var(--white-2);
+  cursor: pointer;
+}
+#closeNavMenuBtn {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px; 
+  background: transparent;
+  outline: none;
+  border: 2px solid var(--white-1);
+  color: var(--white-1);
+  border-radius: 100px;
+  font-size: 15px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  vertical-align: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 650px)  {
+  .navBar .btnContainer {
+    display: block;
+  }
+  .navBar .navRight {
+    position: fixed;
+    top: 0;
+    right: -150%;
+    height: 100vh;
+    width: 100vw;
+
+    background: var(--black-2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .navBar .navRight.active {
+    right: 0;
+  }
+  .navBar .navRight .navList {
+    flex-direction: column;
+  }
+  .navBar .navRight .navList .navItem {
+    margin: 10px 0;
+  }
+  .navBar .navRight .accountContainer {
+    margin: 20px;
+  }
+  #closeNavMenuBtn {
+    display: flex;
+  }
+}

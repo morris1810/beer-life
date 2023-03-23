@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In-BeerLife</title>
+    <link rel="shortcut icon" href="../assetsBeerLife/img/logo.png" type="image/x-icon">
+
+    <!-- CSS Styling -->
+    <link rel="stylesheet" href="../assetsBeerLife/style/userStyle.css">
+</head>
+<body>
+    <main id="mainContent" class="flexContainer">
+        <div class="imgContainer">
+            <a href="../index.html">
+                <img class="logo" src="../assetsBeerLife/img/logo.png" alt="">
+            </a>
+        </div>
+        <h1 class="title">Log In</h1>
+        <form id="loginForm" class="inputContainer flexContainer" action="">
+            <label for="emailInput">Email:</label>
+            <input required type="email" name="emailInput" id="emailInput">
+            <label for="passwordInput">Password:</label>
+            <input required type="password" name="passwordInput" id="passwordInput">
+            <button id="submitBtn" type="submit">Submit</button>
+        </form>
+        <div class="textContainer">
+            <p>No account? <a href="signup.html">Sign up</a></p>
+        </div>
+    </main>
+    <script>
+        const accountEmail = "demo@gmail.com";
+        const accountPassword = "demo12345";
+
+        const submitBtn = document.getElementById("submitBtn");
+        const emailInput = document.getElementById("emailInput");
+        const passwordInput = document.getElementById("passwordInput");
+        const loginForm = document.getElementById("loginForm");
+
+        submitBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (emailInput.value == accountEmail && passwordInput.value == accountPassword) {
+                loginForm.submit();
+                localStorage.setItem("user", emailInput.value);
+                window.location.href = "../index.html";
+            } else {
+                alert("Wrong email or password!!!")
+            }
+        })
+    </script>
+</body>
+</html>

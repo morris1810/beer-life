@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeerLife</title>
+    <link rel="shortcut icon" href="assetsBeerLife/img/logo.png" type="image/x-icon">
+
+    <!-- CSS Styling -->
+    <link rel="stylesheet" href="assetsBeerLife/style/navStyle.css">
+    <link rel="stylesheet" href="assetsBeerLife/style/cartStyle.css">
+</head>
+<body>
+    <nav class="navBar">
+        <div class="navLeft">
+            <img class="logo" src="assetsBeerLife/img/logo.png" alt="logo">
+            <h1 class="companyName">BeerLife</h1>
+        </div>
+        <div class="navRight" id="toggleNavMenu">
+            <button id="closeNavMenuBtn">X</button>
+            <div class="navList">
+                <a href="index.html" class="navItem home">Home</a>
+                <a href="product.html" class="navItem product">Product</a>
+                <a href="contact.html" class="navItem contact">Contact</a>
+            </div>
+            <div class="accountContainer">
+                <a id="nologin" href="user/login.html">
+                    <img src="assetsBeerLife/img/loginIco.png" alt="login icon">
+                </a>
+                <a id="logined" href="cart.html">
+                    <img src="assetsBeerLife/img/userIco.png" alt="user icon">
+                </a>
+            </div>
+        </div>
+        <div class="btnContainer">
+            <button class="menuBtn" id="navMenuBtn">
+                <img src="assetsBeerLife/img/menuIco.png" alt="">
+            </button>
+        </div>
+    </nav>
+    <!-- ======================================================= -->
+    <main id="mainContent">
+        <h1 class="title">Shopping Cart</h1>
+        <form id="paymentForm" action="">
+            <label for="customerName">Name:</label>
+            <input class="check" required type="text" id="customerName" name="customerName">
+            <label for="customerEmail">Email:</label>
+            <input class="check" required type="email" id="customerEmail" name="customerEmail">
+            <label for="customerAddress">Address:</label>
+            <textarea class="check" required name="customerAddress" id="customerAddress" cols="30" rows="10"></textarea>
+            <div class="fixedBtm">
+                <p class="totalPrice">Total: 
+                    <span class="currency">RM</span>
+                    <input class="valid" type="text" id="total" readonly value="0.00">
+                </p>
+                <button type="submit" id="payBtn">Pay</button>
+            </div>
+        </form>
+        <hr>
+        <div id="listItemContainer">
+            <div class="listItem" id="Guinness">
+                <div class="imgContainer">
+                    <img src="assetsBeerLife/img/beer/Guinness_Small_Can.png" alt="item photo" class="itemImg">
+                </div>
+                <div class="infoContainer">
+                    <p class="itemName">Guinness</p>
+                    <div class="amountContainer">
+                        <p class="itemAmount">
+                            <span class="currency">RM</span>
+                            <input type="text" readonly class="subPrice"value="10.00">
+                            <span class="times">x</span>
+                            <input type="number" name="quantity" class="quantity" min="0" value="1" targetItem="Guinness">
+                        </p>
+                        <p class="itemPrice">
+                            <span class="currency">RM</span>
+                            <input type="text" readonly value="0.00" class="subTotal">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="listItem" id="KirinIchiban">
+                <div class="imgContainer">
+                    <img src="assetsBeerLife/img/beer/KirinIchiban_Small_Can.png" alt="item photo" class="itemImg">
+                </div>
+                <div class="infoContainer">
+                    <p class="itemName">KirinIchiban</p>
+                    <div class="amountContainer">
+                        <p class="itemAmount">
+                            <span class="currency">RM</span>
+                            <input type="text" readonly class="subPrice"value="10.00">
+                            <span class="times">x</span>
+                            <input type="number" name="quantity" class="quantity" min="0" value="1" targetItem="KirinIchiban">
+                        </p>
+                        <p class="itemPrice">
+                            <span class="currency">RM</span>
+                            <input type="text" readonly value="0.00" class="subTotal">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="listItem" id="Tiger">
+                <div class="imgContainer">
+                    <img src="assetsBeerLife/img/beer/Tiger_Small_Can.png" alt="item photo" class="itemImg">
+                </div>
+                <div class="infoContainer">
+                    <p class="itemName">Tiger</p>
+                    <div class="amountContainer">
+                        <p class="itemAmount">
+                            <span class="currency">RM</span>
+                            <input type="text" readonly class="subPrice"value="10.00">
+                            <span class="times">x</span>
+                            <input type="number" name="quantity" class="quantity" min="0" value="1" targetItem="Tiger">
+                        </p>
+                        <p class="itemPrice">
+                            <span class="currency">RM</span>
+                            <input type="text" readonly value="0.00" class="subTotal">
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="assetsBeerLife/script/mainScript.js"></script>
+    <script src="assetsBeerLife/script/cartScript.js"></script>
+</body>
+</html>

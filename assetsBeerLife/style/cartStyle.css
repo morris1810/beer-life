@@ -1,0 +1,233 @@
+:root {
+    font-size: 16px;
+    --black-1: #000000;
+    --black-2: #121212;
+    --white-1: #FFFFFF;
+    --white-2: #EEEEEE;
+    --brand-color-1: #F98E00;
+    --brand-color-2: #cfa164;
+}
+::selection {
+    background: var(--brand-color-1);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: var(--black-2);
+    color: var(--white-1);
+    width: 100vw;
+}
+  /*============================================*/
+.flexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*============================================*/
+#mainContent {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 100px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#mainContent .title {
+  font-size: 3rem;
+}
+#mainContent #paymentForm {
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding: 20px 0;
+}
+#mainContent #paymentForm label {
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 5px; 
+}
+#mainContent #paymentForm input,
+#mainContent #paymentForm textarea {
+  width: calc(100% - 20px);
+  font-size: 1rem;
+  margin-bottom: 20px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  resize: vertical;
+}
+#mainContent #paymentForm .fixedBtm {
+  position: fixed;
+  bottom: 0;
+  left: 0; 
+  width: calc(100vw - 20px);
+  height: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 10px;
+  background: var(--brand-color-1);
+  box-shadow: 0 0 10px var(--black-2);
+}
+#mainContent #paymentForm .fixedBtm .totalPrice {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--black-1); 
+  font-weight: 900;
+}
+#mainContent #paymentForm .fixedBtm .totalPrice .currency {
+  padding: 0 5px;
+}
+#mainContent #paymentForm .fixedBtm .totalPrice #total {
+  background: transparent;
+  border: none;
+  outline: none;
+  user-select: none;
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+  width: 120px;
+  font-size: 2rem;
+  font-weight: 900;
+}
+#mainContent #paymentForm .fixedBtm #payBtn {
+  border: solid 3px var(--black-1);
+  color: var(--black-1);
+  background: transparent;
+  padding: 5px 20px;
+  font-size: 1.2rem;
+  border-radius: 100px;
+  font-weight: 900;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#mainContent #paymentForm .fixedBtm #payBtn:hover {
+  color: var(--brand-color-1);
+  background: var(--black-1);
+}
+#mainContent hr {
+  width: 90%;
+  height: 0px;
+  max-width: 850px;
+  border: 1px solid var(--white-2);
+  margin: 10px 0;
+}
+#mainContent #listItemContainer {
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#mainContent #listItemContainer .listItem {
+  background: var(--brand-color-1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 200px;
+  width: 90%;
+  padding: 15px 5%;
+  margin: 10px 0;
+}
+#mainContent #listItemContainer .listItem .imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white-1);
+  height: 160px;
+  width: 160px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--brand-color-2);
+
+}
+#mainContent #listItemContainer .listItem .imgContainer .itemImg {
+  height: 90%;
+}
+#mainContent #listItemContainer .listItem .infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 80%;
+  width: 70%;
+  max-width: 560px;
+}
+#mainContent #listItemContainer .listItem .infoContainer .itemName {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+#mainContent #listItemContainer .listItem .infoContainer .amountContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#mainContent #listItemContainer .listItem .infoContainer .amountContainer .itemAmount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#mainContent #listItemContainer .listItem .infoContainer .amountContainer .itemAmount .currency {
+  margin: 0 10px ;
+}
+#mainContent #listItemContainer .listItem .infoContainer .amountContainer .itemAmount .subPrice {
+  background: transparent;
+  border: none;
+  outline: none;
+  user-select: none;
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--white-1);
+  width: 60px;
+}
+#mainContent #listItemContainer .listItem .infoContainer .amountContainer .itemAmount .times {
+  margin: 0 10px ;
+}
+#mainContent #listItemContainer .listItem .infoContainer .amountContainer .itemAmount .quantity {
+  background: transparent;
+  border: 2px solid var(--white-2);
+  border-radius: 10px;
+  padding: 2px 6px 2px 1px;
+  outline: none;
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--white-1);
+  width: 45px;
+  text-align: right;
+  font-weight: 900;
+}
+#mainContent #listItemContainer .listItem .infoContainer .amountContainer .itemPrice {
+  min-width: 170px;
+}
+#mainContent #listItemContainer .listItem .infoContainer .amountContainer .itemPrice .currency {
+  margin: 0 10px;
+}
+#mainContent #listItemContainer .listItem .infoContainer .amountContainer .itemPrice .subTotal {
+  background: transparent;
+  border: none;
+  outline: none;
+  user-select: none;
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  color: var(--white-1);
+  max-width: 120px;
+}

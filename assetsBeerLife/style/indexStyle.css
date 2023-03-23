@@ -1,0 +1,230 @@
+:root {
+  font-size: 16px;
+  --black-1: #000000;
+  --black-2: #121212;
+  --white-1: #FFFFFF;
+  --white-2: #EEEEEE;
+  --brand-color-1: #F98E00;
+  --brand-color-2: #cfa164;
+}
+::selection {
+  background: var(--brand-color-1);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: var(--black-2);
+  color: var(--white-1);
+  width: 100vw;
+}
+/*============================================*/
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*============================================*/
+.heroSection {
+  position: relative;
+  justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
+  padding-top: 70px;
+  height: calc(100vh - 70px);
+  width: 100%;
+  background: url("../img/heroBg.jpg");
+  background-position: center;
+  background-size: cover;
+  font-size: 16px;
+  box-shadow: 0 0 10px #121212;
+}
+.heroSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.heroSection .flexLeft {
+  /* width: 100%; */
+  min-width: 300px;
+  z-index: 3;
+}
+.heroSection .flexLeft .heroTitle {
+  font-size: 5em;
+  text-shadow: 0 0 10px #000;
+}
+.heroSection .flexRight {
+  height: 200px;
+  /* min-width: 300px; */
+  width: 90%;
+  max-width: 500px;
+  z-index: 2;
+}
+.heroSection .flexRight .imgContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.heroSection .flexRight .imgContainer .cheersBeer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: auto;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+.heroSection .flexRight .imgContainer .cheersBeer.beerLeft{
+  transform: translate(-65%, -45%) rotate(10deg) scale(1);
+  animation-name: cheersBeerLeftAnimation; 
+  
+}
+.heroSection .flexRight .imgContainer .cheersBeer.beerRight{
+  transform: translate(-35%, -50%) rotate(-5deg) scale(1.1);
+  animation-name: cheersBeerRightAnimation; 
+}
+@keyframes cheersBeerLeftAnimation {
+  0% {
+    transform: translate(-75%, -40%) rotate(14deg) scale(1);
+  }
+  50% {
+    transform: translate(-70%, -43%) rotate(12deg) scale(1);
+  }
+  100% {
+    transform: translate(-65%, -45%) rotate(10deg) scale(1);
+  }
+  
+}
+@keyframes cheersBeerRightAnimation {
+  0% {
+    transform: translate(-25%, -40%) rotate(-15deg) scale(1.1);
+  }
+  50% {
+    transform: translate(-30%, -49%) rotate(-10deg) scale(1.1);
+  }
+  100% {
+    transform: translate(-35%, -50%) rotate(-5deg) scale(1.1);
+  }
+
+}
+/*============================================*/
+.aboutSection {
+  min-height: 100vh;
+  font-size: 16px;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, #252525 50%, rgba(0,0,0,1) 100%);
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 15px 0;
+}
+.aboutSection .flexLeft {
+  /* width: 50%; */
+  height: 100%;
+  padding: 15px 0;
+}
+.aboutSection .flexLeft .imgContainer{
+  height: 300px;
+  max-width: 300px;
+  background-color: var(--brand-color-2);
+  border-radius: 20px;
+}
+.aboutSection .flexLeft .imgContainer img{
+  width: 90%;
+  height: 90%;
+  background-color: var(--white-2);
+  border-radius: 20px;
+  object-fit: contain;
+}
+.aboutSection .flexRight {
+  height: 100%;
+  max-width: 500px;
+  padding: 15px 0;
+}
+.aboutSection .flexRight .textContainer {
+  width: 90%;
+
+}
+.aboutSection .flexRight .textContainer p {
+  font-size: 1em;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+/*============================================*/
+.sloganSession {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  justify-content: space-evenly;
+
+  background: url("../img/sessionImg1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.sloganSession::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.sloganSession .bottleBeerContainer {
+  position: relative;
+  width: 10%;
+  height: 100%;
+  z-index: 2;
+}
+.sloganSession .bottleBeerContainer .bottleEmpty {
+  position: absolute;
+  left: 50%;
+  bottom: calc((100% - 325px ) / 2);
+  transform: translateX(-50%);
+  object-position: bottom;
+  object-fit: cover;
+  overflow: hidden;
+  width: 90px;
+  height: 325px;
+}
+.sloganSession .bottleBeerContainer .bottleBeer {
+  position: absolute;
+  left: 50%;
+  bottom: calc((100% - 325px ) / 2);
+  transform: translateX(-50%);
+  object-position: bottom;
+  object-fit: cover;
+  overflow: hidden;
+  width: 90px;
+  height: 325px;
+  animation: fillBeer 3s ease-in infinite;
+}
+.sloganSession .sloganContainer {
+  width: 50%;
+  z-index: 3;
+}
+.sloganSession .sloganContainer .slogan {
+  font-size: 2em;
+  text-align: center;
+  text-shadow: 0 0 10px #000;
+
+}
+@keyframes fillBeer  {
+  0% {height: 0px;}
+  60% {height: 325px; opacity: 1;}
+  100% {opacity: 0;}
+}
+/*============================================*/
+@media screen and (max-width: 365px)  {
+  .heroSection, .aboutSection, .sloganSession {
+    font-size: 14px;
+  }
+}

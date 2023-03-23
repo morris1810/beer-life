@@ -1,0 +1,90 @@
+:root {
+    --black-1: #000000;
+    --black-2: #121212;
+    --white-1: #FFFFFF;
+    --white-2: #EEEEEE;
+    --brand-color-1: #F98E00;
+    --brand-color-2: #cfa164;
+}
+.footer {
+    min-height: 300px;
+    width: 100vw;
+    font-size: 16px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    z-index: 99;
+}
+.footer .footLeft {
+    height: 100%;
+    min-width: 400px;
+}
+.footer .footLeft .companyName {
+    font-size: 5em
+}
+.footer .footRight {
+
+    width: 40%;
+    min-width: 400px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.footer .footRight .contactContainer {}
+.footer .footRight .contactContainer .contactListItem {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.footer .footRight .contactContainer .contactListItem .contactIco {
+    height: 20px;
+    border-radius: 10px;
+    border: 5px solid var(--white-2);
+    background: var(--white-2);
+}
+.footer .footRight .contactContainer .contactListItem .contactDetail {
+    font-size: 1em;
+    margin: 15px 10px;
+}
+.footer .footRight .navPageContainer {}
+.footer .footRight .navPageContainer .navPageItem {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-decoration: none;
+}
+.footer .footRight .navPageContainer .navPageItem .navIco {
+    height: 20px;
+    border-radius: 10px;
+    border: 5px solid var(--white-2);
+    background: var(--white-2);
+    transition: 0.2s;
+}
+.footer .footRight .navPageContainer .navPageItem .navDetail {
+    font-size: 1em;
+    margin: 15px 10px;
+    color: var(--white-1);
+    text-decoration: none;
+    transition: 0.2s;
+}
+.footer .footRight .navPageContainer .navPageItem:hover .navIco {
+    border: 5px solid var(--brand-color-2);
+    background: var(--brand-color-2);
+}
+.footer .footRight .navPageContainer .navPageItem:hover .navDetail {
+    color: var(--brand-color-2);
+}
+
+@media screen and (max-width: 450px) {
+    .footer .footLeft .companyName {
+        font-size: 15vw;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .footer .footRight {
+        flex-direction: column;
+        align-items: start;
+        padding: 0 10% 0;
+        min-width: unset;
+        width: 80%;
+    }
+
+}

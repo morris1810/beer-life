@@ -1,0 +1,106 @@
+:root {
+    font-size: 20px;
+    --black-1: #000000;
+    --black-2: #121212;
+    --black-3: #252525;
+    --white-1: #FFFFFF;
+    --white-2: #EEEEEE;
+    --brand-color-1: #F98E00;
+    --brand-color-2: #cfa164;
+}
+::selection {
+    background: var(--brand-color-1);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: var(--black-2);
+    color: var(--white-1);
+    width: 100vw;
+}
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#mainContent {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--black-3);
+}
+#mainContent .imgContainer {
+    height: 300px;
+    width: 300px;
+    background-color: var(--brand-color-2);
+    border-radius: 20px;
+}
+#mainContent .imgContainer a {
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+}
+#mainContent .imgContainer .logo {
+    height: 90%;
+    margin: 5%;
+    object-fit: contain;
+    background-color: var(--white-2);
+    border-radius: 20px;
+    
+}
+#mainContent .title {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+#mainContent .inputContainer {
+    align-items: start;
+    width: 100%;
+    max-width: 300px;
+}
+#mainContent .inputContainer label {
+    width: 100%;
+    margin-bottom: 2px;
+    font-size: 1rem;
+}
+#mainContent .inputContainer input {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    outline: none;
+    color: var(--black-1);
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 5px 10px;
+}
+#mainContent .inputContainer #submitBtn {
+    background-color: transparent;
+    color: var(--white-2);
+    border: 2px solid var(--white-2);
+    padding: 5px 20px;
+    margin: 10px 0 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    align-self: center;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+#mainContent .inputContainer #submitBtn:hover {
+    background-color: var(--white-1);
+    color: var(--black-1);
+    border: 2px solid var(--white-1);
+
+}
+
+#mainContent .textContainer p {
+    text-align: center;
+    font-size: 0.8rem;
+}
+#mainContent .textContainer a {
+    color: aqua;
+}
+

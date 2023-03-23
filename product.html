@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeerLife</title>
+    <link rel="shortcut icon" href="assetsBeerLife/img/logo.png" type="image/x-icon">
+
+    <!-- CSS Styling -->
+    <link rel="stylesheet" href="assetsBeerLife/style/navStyle.css">
+    <link rel="stylesheet" href="assetsBeerLife/style/productStyle.css">
+    <link rel="stylesheet" href="assetsBeerLife/style/footerStyle.css">
+</head>
+<body>
+    <nav class="navBar">
+        <div class="navLeft">
+            <img class="logo" src="assetsBeerLife/img/logo.png" alt="logo">
+            <h1 class="companyName">BeerLife</h1>
+        </div>
+        <div class="navRight" id="toggleNavMenu">
+            <button id="closeNavMenuBtn">X</button>
+            <div class="navList">
+                <a href="index.html" class="navItem home">Home</a>
+                <a href="product.html" class="navItem product active">Product</a>
+                <a href="contact.html" class="navItem contact">Contact</a>
+            </div>
+            <div class="accountContainer">
+                <a id="nologin" href="user/login.html">
+                    <img src="assetsBeerLife/img/loginIco.png" alt="login icon">
+                </a>
+                <a id="logined" href="cart.html">
+                    <img src="assetsBeerLife/img/userIco.png" alt="user icon">
+                </a>
+            </div>
+        </div>
+        <div class="btnContainer">
+            <button class="menuBtn" id="navMenuBtn">
+                <img src="assetsBeerLife/img/menuIco.png" alt="">
+            </button>
+        </div>
+    </nav>
+    <!-- ======================================================= -->
+    <main id="mainContent">
+        <div class="bar">
+            <form action="" id="searchBar">
+                <input type="text" id="searchInput" name="search" placeholder="Search...">
+                <button type="submit" id="searchBtn">
+                    <img id="searchIco" src="assetsBeerLife/img/searchIco.png" alt="search icon">
+                </button>
+            </form>
+            <div class="btnContainer">
+                <a href="cart.html" id="cartBtn">
+                    <img id="cartIco" src="assetsBeerLife/img/cartIco.png" alt="cart icon">
+                </a>
+            </div>
+        </div>
+        <section class="productSection">
+            <div id="productContainer">
+                <!-- <div class="productItem">
+                    <div class="imgContainer">
+                        <img src="assetsBeerLife/img/beer/Edelweiss_Long_Can.png" alt="beer photo" class="productImg">
+                    </div>
+                    
+                    <div class="textContainer">
+                        <div class="descContainer">
+                            <h6 class="productName">Edelweiss</h6>
+                            <p class="productDesc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, quis?</p>
+                        </div>
+                        <div class="priceContainer">
+                            <div class="flexContainer">
+                                <p class="productPrice">
+                                    <span class="currency">RM</span>
+                                    <input class="priceAmount" type="text" value="220.00" readonly>
+                                </p>
+                                <p class="productInfo">330ml</p>
+                            </div>
+                            <button class="addCartBtn">Add to cart</button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================================================= -->
+    <footer class="footer flexContainer">
+        <div class="footLeft">
+            <h1 class="companyName">BeerLife</h1>
+        </div>
+        <div class="footRight flexContainer">
+            <div class="contactContainer">
+                <div class="contactListItem">
+                    <img src="assetsBeerLife/img/instagramIco.png" alt="instagram icon" class="contactIco">
+                    <p class="contactDetail">@beer_life</p>
+                </div>
+                <div class="contactListItem">
+                    <img src="assetsBeerLife/img/gmailIco.png" alt="email icon" class="contactIco">
+                    <p class="contactDetail">example@beerlife.com</p>
+                </div>
+                <div class="contactListItem">
+                    <img src="assetsBeerLife/img/whatsappIco.png" alt="phone icon" class="contactIco">
+                    <p class="contactDetail">+60-123456789</p>
+                </div>
+            </div>
+            <div class="navPageContainer">
+                <a href="index.html" class="navPageItem">
+                    <img src="assetsBeerLife/img/homeIco.png" alt="home icon" class="navIco">
+                    <p class="navDetail">Home</p>
+                </a>
+                <a href="product.html" class="navPageItem">
+                    <img src="assetsBeerLife/img/productIco.png" alt="product icon" class="navIco">
+                    <p class="navDetail">Product</p>
+                </a>
+                <a href="contact.html" class="navPageItem">
+                    <img src="assetsBeerLife/img/contactIco.png" alt="contact icon" class="navIco">
+                    <p class="navDetail">Contact</p>
+                </a>
+            </div>
+        </div>
+    </footer>   
+    <script src="assetsBeerLife/script/mainScript.js"></script>     
+    <script src="assetsBeerLife/script/productScript.js"></script>     
+
+</body>
+</html>

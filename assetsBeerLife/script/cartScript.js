@@ -70,6 +70,8 @@ window.addEventListener("load", () => {
         e.preventDefault();
         if (!(payBtn.classList.contains("active"))) {
             showInvalidInput();
+        } else if (parseFloat(document.getElementById("total").value) <= 0) {
+            alert("Amount cannot be RM 0!");
         } else {
             paymentForm.submit();
             alert("Submitted");
@@ -85,10 +87,8 @@ window.addEventListener("load", () => {
             const quantity = buyItems[i].querySelector(".quantity");
             const itemPrice = buyItems[i].querySelector(".subPrice");
             const itemAmount = buyItems[i].querySelector(".subTotal");
+            quantity.value = Math.round(quantity.value);
             itemAmount.value = (parseFloat(itemPrice.value) * parseFloat(quantity.value)).toFixed(2);
-            console.log(itemPrice.value)
-            console.log(quantity.value)
-            console.log(itemAmount.value)
         }
 
         //Calc for total

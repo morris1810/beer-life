@@ -43,11 +43,11 @@
     <main id="mainContent">
         <h1 class="title">Shopping Cart</h1>
         <form id="paymentForm" action="">
-            <label for="customerName">Name:</label>
+            <label for="customerName">Name*:</label>
             <input class="check" required type="text" id="customerName" name="customerName">
-            <label for="customerEmail">Email:</label>
+            <label for="customerEmail">Email*:</label>
             <input class="check" required type="email" id="customerEmail" name="customerEmail">
-            <label for="customerAddress">Address:</label>
+            <label for="customerAddress">Address*:</label>
             <textarea class="check" required name="customerAddress" id="customerAddress" cols="30" rows="10"></textarea>
             <div class="fixedBtm">
                 <p class="totalPrice">Total: 
@@ -70,7 +70,7 @@
                             <span class="currency">RM</span>
                             <input type="text" readonly class="subPrice"value="10.00">
                             <span class="times">x</span>
-                            <input type="number" name="quantity" class="quantity" min="0" value="1" targetItem="Guinness">
+                            <input type="number" name="quantity" class="quantity" min="0" value="1" step="1" targetItem="Guinness">
                         </p>
                         <p class="itemPrice">
                             <span class="currency">RM</span>
@@ -90,7 +90,7 @@
                             <span class="currency">RM</span>
                             <input type="text" readonly class="subPrice"value="10.00">
                             <span class="times">x</span>
-                            <input type="number" name="quantity" class="quantity" min="0" value="1" targetItem="KirinIchiban">
+                            <input type="number" name="quantity" class="quantity" min="0" value="1" step="1" targetItem="KirinIchiban">
                         </p>
                         <p class="itemPrice">
                             <span class="currency">RM</span>
@@ -110,7 +110,7 @@
                             <span class="currency">RM</span>
                             <input type="text" readonly class="subPrice"value="10.00">
                             <span class="times">x</span>
-                            <input type="number" name="quantity" class="quantity" min="0" value="1" targetItem="Tiger">
+                            <input type="number" name="quantity" class="quantity" min="0" value="1" step="1" targetItem="Tiger">
                         </p>
                         <p class="itemPrice">
                             <span class="currency">RM</span>

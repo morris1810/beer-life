@@ -113,6 +113,8 @@ function addToCart() {
 function printProduct(target, list) {
     const listLength = list.length;
     const container = target;
+    const searchResultAmount = document.getElementById("searchResultAmount");
+    searchResultAmount.innerText = listLength;
 
     target.innerHTML = " ";
 

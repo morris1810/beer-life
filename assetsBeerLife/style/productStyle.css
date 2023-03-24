@@ -102,8 +102,24 @@ body {
 }
 #mainContent .bar .btnContainer #cartBtn #cartIco {
     height: 60%; 
-
+    
 }
+#mainContent #resultTable {
+    border: solid 2px var(--white-4);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+#mainContent #resultTable tr {
+    color: var(--white-4);
+}
+#mainContent #resultTable th {
+    border-right: dashed 2px var(--white-4);
+    padding-right: 10px;
+}
+#mainContent #resultTable td {
+    padding-left: 10px;
+}
+
 
 #mainContent .productSection {
     width: 100%;

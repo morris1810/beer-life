@@ -87,7 +87,11 @@ window.addEventListener("load", () => {
             const quantity = buyItems[i].querySelector(".quantity");
             const itemPrice = buyItems[i].querySelector(".subPrice");
             const itemAmount = buyItems[i].querySelector(".subTotal");
-            quantity.value = Math.round(quantity.value);
+            if (quantity.value == NaN) {
+                quantity.value = "0";
+            } else {
+                quantity.value = Math.round(quantity.value);
+            }
             itemAmount.value = (parseFloat(itemPrice.value) * parseFloat(quantity.value)).toFixed(2);
         }
 

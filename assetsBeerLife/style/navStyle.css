@@ -187,7 +187,7 @@
   #closeNavMenuBtn {
     display: flex;
   }
-}
-.navBar .navRight .accountContainer img {
-  height: 80px;
+  .navBar .navRight .accountContainer img {
+    height: 80px;
+  }
 }

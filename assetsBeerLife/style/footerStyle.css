@@ -23,12 +23,18 @@
 }
 .footer .footRight {
 
-    width: 40%;
-    min-width: 400px;
+    width: 50%;
+    width: 540px;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.footer .footRight .contactContainer {}
+.footer .footRight .contactContainer {
+    min-width: 270px;
+}
+.footer .footRight .contactContainer .listTitle {
+    font-size: 1.2em;
+    margin: 15px 0px;
+}
 .footer .footRight .contactContainer .contactListItem {
     display: flex;
     justify-content: start;
@@ -44,34 +50,30 @@
     font-size: 1em;
     margin: 15px 10px;
 }
-.footer .footRight .navPageContainer {}
-.footer .footRight .navPageContainer .navPageItem {
+.footer .footRight .ppInfoContainer {
+    min-width: 270px;
+
+}
+.footer .footRight .ppInfoContainer .listTitle {
+    font-size: 1.2em;
+    margin: 15px 0px;
+}
+.footer .footRight .ppInfoContainer .ppInfoListItem {
     display: flex;
     justify-content: start;
     align-items: center;
-    text-decoration: none;
 }
-.footer .footRight .navPageContainer .navPageItem .navIco {
+.footer .footRight .ppInfoContainer .ppInfoListItem .ppInfoIco {
     height: 20px;
     border-radius: 10px;
     border: 5px solid var(--white-2);
     background: var(--white-2);
-    transition: 0.2s;
 }
-.footer .footRight .navPageContainer .navPageItem .navDetail {
+.footer .footRight .ppInfoContainer .ppInfoListItem .ppInfoDetail {
     font-size: 1em;
     margin: 15px 10px;
-    color: var(--white-1);
-    text-decoration: none;
-    transition: 0.2s;
 }
-.footer .footRight .navPageContainer .navPageItem:hover .navIco {
-    border: 5px solid var(--brand-color-2);
-    background: var(--brand-color-2);
-}
-.footer .footRight .navPageContainer .navPageItem:hover .navDetail {
-    color: var(--brand-color-2);
-}
+
 
 @media screen and (max-width: 450px) {
     .footer .footLeft .companyName {

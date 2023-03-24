@@ -118,8 +118,13 @@ body {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-
+    
     margin: 20px 0 100px;
+}
+#mainContent .productSection #productContainer .noProductFound {
+    color: var(--white-1);
+    font-size: 1rem;
+    opacity: 0.8;
 }
 
 

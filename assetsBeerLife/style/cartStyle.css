@@ -128,6 +128,15 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 50px 0;
+}
+#mainContent #listItemContainer .noItemFound {
+  color: var(--white-1);
+  font-size: 1rem;
+  opacity: 0.8;
+}
+#mainContent #listItemContainer .noItemFound a {
+  color: aqua;
 }
 #mainContent #listItemContainer .listItem {
   background: var(--brand-color-1);

@@ -2,7 +2,7 @@
   <img width="250" src="assetsBeerLife/img/logo.png" alt="Clear Way"/>
 </p>
 
-# BeerLife - Web Fundamentals Project
+# BeerLife - Web Fundamentals Project 
 
 ### Overview
 
